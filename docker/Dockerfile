@@ -33,5 +33,9 @@ RUN npm install -g gulp@4.0
 #
 RUN npm install -g nodemon
 
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY ./docker /usr/src/app/docker
 
 CMD [ "./docker/docker-entrypoint.sh" ]
